@@ -7,12 +7,14 @@ const changeFilter = createSlice({
   },
 
   reducers: {
-    selectNameFilter(state, action) {
+    filterContacts(state, action) {
       state.name = action.payload;
     },
   },
 });
 
-export const { selectNameFilter } = changeFilter.actions;
+export const { filterContacts } = changeFilter.actions;
 
 export const changeFilterReducer = changeFilter.reducer;
+
+export const selectNameFilter = (state) => state.filters.name;

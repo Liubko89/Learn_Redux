@@ -22,6 +22,12 @@ function App() {
       <ContactForm />
       <SearchBox />
       {isLoading && !error && <b>Request in progress...</b>}
+      {error && (
+        <b>
+          There is a problem with the connection to the server, please try again
+          later
+        </b>
+      )}
       <ContactList />
     </div>
   );

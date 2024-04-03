@@ -8,15 +8,6 @@ const ContactList = () => {
 
   return (
     <ul className={css.contactList}>
-      {visibleContacts.length === 0 && (
-        <li>
-          <b>
-            There are no contacts in your phonebook yet. Add some to get
-            started!
-          </b>
-        </li>
-      )}
-
       {visibleContacts &&
         Array.isArray(visibleContacts) &&
         visibleContacts.length > 0 &&
